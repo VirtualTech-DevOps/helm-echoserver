@@ -1,0 +1,50 @@
+replicaCount: 3
+
+image:
+  repository: gcr.io/google_containers/echoserver
+  pullPolicy: IfNotPresent
+  tag: "1.4"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: true
+  className: ""
+  annotations: {alb.ingress.kubernetes.io/scheme: internet-facing,external-dns.alpha.kubernetes.io/hostname: echoserver.devops.virtualtech.jp,kubernetes.io/ingress.class: alb}
+  hosts:
+    - host: echoserver.devops.virtualtech.jp
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
