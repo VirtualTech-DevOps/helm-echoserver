@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: gcr.io/google_containers/echoserver
   pullPolicy: IfNotPresent
-  tag: "1.7"
+  tag: "1.8"
 
 imagePullSecrets: []
 nameOverride: ""
