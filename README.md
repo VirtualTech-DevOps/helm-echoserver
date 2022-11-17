@@ -22,6 +22,7 @@ $ helm upgrade -i helm-echoserver \
 
 | Chart Revision | App Version |
 |----------------|-------------|
+| 0.6.0          | 1.9         |
 | 0.5.0          | 1.8         |
 | 0.4.0          | 1.7         |
 | 0.3.0          | 1.6         |
