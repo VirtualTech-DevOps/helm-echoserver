@@ -5,7 +5,19 @@ echoserverのHelmチャートです。主にKubernetesやArgo CDの動作確認�
 ```
 $ helm repo add helm-echoserver https://VirtualTech-DevOps.github.io/helm-echoserver
 $ helm repo update
-$ helm upgrade -i helm-echoserver helm-echoserver/helm-echoserver --namespace echoserver --create-namespace 
+```
+
+```
+$ domain=test.devops.virtualtech.jp
+
+$ helm upgrade -i helm-echoserver \
+    helm-echoserver/helm-echoserver \
+    --namespace echoserver \
+    --create-namespace \
+    --set "ingress.hosts[0].host=$domain" \
+    --set 'ingress.hosts[0].paths[0].path=/' \
+    --set 'ingress.hosts[0].paths[0].pathType=Prefix' \
+    --set "ingress.annotations.external-dns\.alpha\.kubernetes\.io/hostname=$domain"
 ```
 
 | Chart Revision | App Version |
