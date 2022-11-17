@@ -27,7 +27,10 @@ service:
 ingress:
   enabled: true
   className: ""
-  annotations: {alb.ingress.kubernetes.io/scheme: internet-facing,external-dns.alpha.kubernetes.io/hostname: echoserver.devops.virtualtech.jp,kubernetes.io/ingress.class: alb}
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    external-dns.alpha.kubernetes.io/hostname: echoserver.devops.virtualtech.jp
+    kubernetes.io/ingress.class: alb
   hosts:
     - host: echoserver.devops.virtualtech.jp
       paths:
