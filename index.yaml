@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   helm-echoserver:
   - apiVersion: v2
+    appVersion: "1.10"
+    created: "2022-11-18T01:36:38.444115203Z"
+    description: A Helm chart for Kubernetes
+    digest: 4fe448a49601d6b2350ac74db542dd7f8af9dee2a5497b584d6540b3b67505ef
+    name: helm-echoserver
+    type: application
+    urls:
+    - https://github.com/VirtualTech-DevOps/helm-echoserver/releases/download/helm-echoserver-0.7.0/helm-echoserver-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     appVersion: "1.9"
     created: "2022-11-17T10:35:42.602658549Z"
     description: A Helm chart for Kubernetes
@@ -61,4 +71,4 @@ entries:
     urls:
     - https://github.com/VirtualTech-DevOps/helm-echoserver/releases/download/helm-echoserver-0.1.0/helm-echoserver-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-17T10:35:42.602849453Z"
+generated: "2022-11-18T01:36:38.444301705Z"
